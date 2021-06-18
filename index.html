@@ -110,20 +110,32 @@
        
         
         if(pin === dpin){
-            console.log("match this number")
+            // console.log("match this number")
 
-            const match = document.getElementById("correct");
-            match.style.display = "block";
+            // const match = document.getElementById("correct");
+            // match.style.display = "block";
+            matchresult("block" , "none")
 
         }
 
 
         else {
-            console.log("not match this number")
-            const notMatch = document.getElementById("incorrect");
-            notMatch.style.display = "block";
+            // console.log("not match this number")
+            // const notMatch = document.getElementById("incorrect");
+            // notMatch.style.display = "block";
+            matchresult("none" , "block")
         }
      })
+
+     function matchresult(correctStatus , inCorrectStatus){
+
+        const match = document.getElementById("correct");
+            match.style.display = correctStatus;
+
+            const notMatch = document.getElementById("incorrect");
+            notMatch.style.display = inCorrectStatus;
+
+     }
      
 
     </script>
